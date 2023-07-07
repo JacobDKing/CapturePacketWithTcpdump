@@ -45,7 +45,7 @@ Run tcpdump with the following options:
 <img src="" height="80%" alt=""/>
 
 
-Exploring network packet details
+<h4>Exploring network packet details</h4>
 
 In the example data at the start of the packet output, tcpdump reported that it was listening on the eth0 interface, and it provided information on the link type and the capture size in bytes:
 <img src="" height="80%" alt=""/>
