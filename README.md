@@ -1,4 +1,4 @@
-# Capture a Packet With TCPdump
+# Capture a Packet With TCPDump
 This project is meant to show comfortability and competence with using the TCPdump program to capture packets.
 
 <br />
