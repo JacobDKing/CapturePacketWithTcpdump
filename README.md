@@ -1,11 +1,7 @@
 # Capture a Packet With TCPDump
 This project is meant to show comfortability and competence with using the TCPdump program to capture packets.
 
-<br />
-
-<h2>Scenario: </h2>
-You’re a network analyst who needs to use tcpdump to capture and analyze live network traffic from a Linux virtual machine.
-
+In this project, I act as an analyst who needs to use tcpdump to capture and analyze live network traffic from a Linux virtual machine.
 
 Tasks in this lab:
 
@@ -20,13 +16,12 @@ Tasks in this lab:
 <h2>Identify Network Interfaces</h2>
 In this task, tcpdump is used to filter live network packet traffic on an interface.
 
-
-
 Use ifconfig to identify the interfaces that are available:
-<img src="" height="80%" alt=""/>
-The Ethernet network interface is identified as eth0.
-Use tcpdump to identify the interface options available for packet capture:
-<img src="" height="80%" alt=""/>
+ <br /> 
+<img src="https://i.imgur.com/xD0UJVu.png" height="80%" alt="Identify Network Interfaces 1"/> <br />
+The Ethernet network interface is identified as eth0. <br />
+Use tcpdump to identify the interface options available for packet capture: <br />
+<img src="https://i.imgur.com/lWAJDMZ.png" height="80%" alt="Identify Network Interfaces 2"/> <br />
 
 
 
@@ -35,28 +30,26 @@ Use tcpdump to identify the interface options available for packet capture:
 <h2>Inspect the network traffic of a network interface with tcpdump</h2>
 In this example, some of the properties that tcpdump outputs for the packet capture data previously shown will be identified.
 
-Filter live network packet data from the eth0 interface with tcpdump:
-
 Run tcpdump with the following options: 
   - Capture data specifically from the eth0 interface.
   - Display detailed packet data.
   - Capture 5 packets of data.
 
-<img src="" height="80%" alt=""/>
+<img src="https://i.imgur.com/TPyRnl9.png" height="80%" alt="Inspect the network traffic of a network interface with tcpdump 1"/> <br />
 
 
 <h4>Exploring network packet details</h4>
 
-In the example data at the start of the packet output, tcpdump reported that it was listening on the eth0 interface, and it provided information on the link type and the capture size in bytes:
-<img src="" height="80%" alt=""/>
-On the next line, the first field is the packet's timestamp, followed by the protocol type, IP:
-<img src="" height="80%" alt=""/>
-The verbose option, -v, has provided more details about the IP packet fields, such as TOS, TTL, offset, flags, internal protocol type (in this case, TCP (6)), and the length of the outer IP packet in bytes:
-<img src="" height="80%" alt=""/>
-In the next section, the data shows the systems that are communicating with each other:
-<img src="" height="80%" alt=""/>
-The remaining data filters the header data for the inner TCP packet:
-<img src="" height="80%" alt=""/>
+In the example data at the start of the packet output, tcpdump reported that it was listening on the eth0 interface, and it provided information on the link type and the capture size in bytes: <br />
+<img src="https://i.imgur.com/80FtZWa.png" height="80%" alt="Inspect the network traffic of a network interface with tcpdump 2"/> <br />
+On the next line, the first field is the packet's timestamp, followed by the protocol type, IP: <br />
+<img src="https://i.imgur.com/XyNQ6rw.png" height="80%" alt="Inspect the network traffic of a network interface with tcpdump 3"/> <br />
+The verbose option, -v, has provided more details about the IP packet fields, such as TOS, TTL, offset, flags, internal protocol type (in this case, TCP (6)), and the length of the outer IP packet in bytes: <br />
+<img src="https://i.imgur.com/IBHXHV1.png" height="80%" alt="Inspect the network traffic of a network interface with tcpdump 4"/> <br />
+In the next section, the data shows the systems that are communicating with each other: <br />
+<img src="https://i.imgur.com/GszEnf4.png" height="80%" alt="Inspect the network traffic of a network interface with tcpdump 5"/> <br />
+The remaining data filters the header data for the inner TCP packet: <br />
+<img src="https://i.imgur.com/HegR1Ud.png" height="80%" alt="Inspect the network traffic of a network interface with tcpdump 6"/> <br />
 
 <br />
 <br />
@@ -72,11 +65,11 @@ Capture packet data into a file called capture.pcap using a specific command wil
   - Filter only port 80 traffic. This is the default HTTP port.
   - Save the captured data to the named file.
 
-<img src="" height="80%" alt=""/>
-Use curl to generate some HTTP (port 80) traffic:
-<img src="" height="80%" alt=""/>
-Verify that packet data has been captured:
-<img src="" height="80%" alt=""/>
+<img src="https://i.imgur.com/6hOkCkz.png" height="80%" alt="Capture network traffic with tcpdump 1"/> <br />
+Use curl to generate some HTTP (port 80) traffic: <br />
+<img src="https://i.imgur.com/7wEpq97.png" height="80%" alt="Capture network traffic with tcpdump 2"/> <br />
+Verify that packet data has been captured: <br />
+<img src="https://i.imgur.com/8gnKF5Y.png" height="80%" alt="Capture network traffic with tcpdump 3"/> <br />
 
 <br />
 <br />
@@ -90,13 +83,13 @@ Use the tcpdump command to filter the packet header data from the capture.pcap c
   - Read capture data from the named file.
   - Display detailed packet data.
 
-[image]
-Use the tcpdump command to filter the extended packet data from the capture.pcap capture file using a specific command to run tcpdump with the following options: 
+<img src="https://i.imgur.com/9kKeB9y.png" height="80%" alt="Filter the captured packet data 1"/> <br />
+Use the tcpdump command to filter the extended packet data from the capture.pcap capture file using a specific command to run tcpdump with the following options:  <br />
 
   - Disable port and protocol name lookup.
   - Read capture data from the named file.
-  - Display the hexadecimal and ASCII output format packet data. (Security analysts can analyze hexadecimal and ASCII output to detect patterns or anomalies during malware analysis or forensic analysis.)
-<img src="" height="80%" alt=""/>
+  - Display the hexadecimal and ASCII output format packet data. (Security analysts can analyze hexadecimal and ASCII output to detect patterns or anomalies during malware analysis or forensic analysis.) <br />
+<img src="https://i.imgur.com/t7L14u7.png" height="80%" alt="Filter the captured packet data 2"/> <br />
 
 <br />
 <br />
