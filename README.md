@@ -1,8 +1,10 @@
-# Capture a Packet With TCPDump
-This project is meant to show comfortability and competence with using the TCPdump program to capture packets.
+# Packet Capture & Traffic Analysis with TCPDump
 
-In this project, I act as an analyst who needs to use tcpdump to capture and analyze live network traffic from a Linux virtual machine.
+In this project, I demonstrate the steps taken to perform a packet capture using the TCPDump tool as well as analyze live network traffic from a Linux virtual machine. <br />
+This project was performed in a controlled network environment using a default admin account "analyst@d4231fd76054".
+<br />
 
+<br />
 Tasks in this lab:
 
   - Identify available network interfaces. 
@@ -16,15 +18,19 @@ Tasks in this lab:
 <h2>Identify Network Interfaces</h2>
 In this task, tcpdump is used to filter live network packet traffic on an interface.
 
-Use ifconfig to identify the interfaces that are available:
+Use ifconfig to identify the interfaces that are available: <br />
  <br /> 
 <img src="https://i.imgur.com/xD0UJVu.png" height="80%" alt="Identify Network Interfaces 1"/> <br />
+<br />
 The Ethernet network interface is identified as eth0. <br />
 Use tcpdump to identify the interface options available for packet capture: <br />
+<br />
 <img src="https://i.imgur.com/lWAJDMZ.png" height="80%" alt="Identify Network Interfaces 2"/> <br />
 
 
-
+<br />
+<br />
+<br />
 
 
 <h2>Inspect the network traffic of a network interface with tcpdump</h2>
@@ -38,7 +44,7 @@ Run tcpdump with the following options:
 <img src="https://i.imgur.com/TPyRnl9.png" height="80%" alt="Inspect the network traffic of a network interface with tcpdump 1"/> <br />
 
 
-<h4>Exploring network packet details</h4>
+<h4>Examining the network packet details:</h4>
 
 In the example data at the start of the packet output, tcpdump reported that it was listening on the eth0 interface, and it provided information on the link type and the capture size in bytes: <br />
 <img src="https://i.imgur.com/80FtZWa.png" height="80%" alt="Inspect the network traffic of a network interface with tcpdump 2"/> <br />
@@ -51,8 +57,11 @@ In the next section, the data shows the systems that are communicating with each
 The remaining data filters the header data for the inner TCP packet: <br />
 <img src="https://i.imgur.com/HegR1Ud.png" height="80%" alt="Inspect the network traffic of a network interface with tcpdump 6"/> <br />
 
+
 <br />
 <br />
+<br />
+
 
 <h2>Capture network traffic with tcpdump</h2>
 In this step, tcpdump is used  to save the captured network data to a packet capture file.
@@ -71,8 +80,11 @@ Use curl to generate some HTTP (port 80) traffic: <br />
 Verify that packet data has been captured: <br />
 <img src="https://i.imgur.com/8gnKF5Y.png" height="80%" alt="Capture network traffic with tcpdump 3"/> <br />
 
+
 <br />
 <br />
+<br />
+
 
 <h2>Filter the captured packet data</h2>
 In this step, tcpdump will be used to filter data from the packet capture file that was previously saved.
@@ -91,9 +103,10 @@ Use the tcpdump command to filter the extended packet data from the capture.pcap
   - Display the hexadecimal and ASCII output format packet data. (Security analysts can analyze hexadecimal and ASCII output to detect patterns or anomalies during malware analysis or forensic analysis.) <br />
 <img src="https://i.imgur.com/t7L14u7.png" height="80%" alt="Filter the captured packet data 2"/> <br />
 
-<br />
-<br />
 
+<br />
+<br />
+<br />
 
 
 
